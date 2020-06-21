@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>about taar</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/normalize.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/skeleton.css') }}">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% endblock %}
+
+{% block body %}
+    <div class="container" style="padding-left: 15%; margin: 0;">
+        <div class="u-pull-right">
+            <p><a href="home">home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="about-us">about us</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 2%; font-size: 220%; color: #B71D1D; font-weight: 300; margin-bottom: 0; text-align: center;">
+            about taar
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p style="font-size: 100%; font-weight: 500; text-align: center; margin-top: 2%;">in today's world, mistrust and divisions run deep in society.
+                <br>presenting <strong>taar</strong>, a one stop shop for all the people who want to verify the news they consume.
+                <br><br>let us help you identify the articles, blogs, and other pieces of writing that have inherent biases and are opinionated journalism in disguise. we aim to provide a tool to the public to help them identify biases through natural language processing and machine learning.
+                <br><br>every individual has personal opinions and biases and so it is essential that writers don't force their views on their readers. after researching extensively on this issue, we have created an algorithm that analyzes text, gives it a 'subjectivity' score out of 100 and classifies it as one of four types -- unbiased, slightly biased, biased and highly biased.
+                <br><br>as we advance this tool, there is a lot that we will add. political sledging has become commonplace and we will soon be able to identify hate speech and discrimination in articles and blogs. our algorithm will also provide relevant links to neutral sources pertaining to the analyzed text.
+            </p>
+        </div>
+    </div>
+    <div class="u-pull-bottom" style="margin-top: 4%; text-align: center; font-size: 80%; font-weight: 300;">contact either of us at <a href="mailto:goeltanish15@gmail.com">goeltanish115@gmail.com</a> or <a href="mailto:ag18052002@gmail.com">ag18052002@gmail.com</a> for any issue or clarification</div>
+{% endblock %}

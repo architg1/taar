@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>about us</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/normalize.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/skeleton.css') }}">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% endblock %}
+
+{% block body %}
+    <div class="container" style="padding-left: 15%; margin: 0;">
+        <div class="u-pull-right">
+            <p><a href="home">home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="about-taar">about taar</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 2%; font-size: 220%; color: #B71D1D; font-weight: 300; margin-bottom: 0;">
+            about us
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 2%; font-size: 150%;">
+            tanish goel [co-founder]
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 1%; background-color: rgb(240, 239, 239); width: 70%; height: 60px;">
+            <p style="padding-top: 1%; padding-left: 1%; padding-bottom: 1%; padding-right: 1%; font-weight: 500;">incoming freshmaan at JHU who loves to code, build, and design things. received india's highest civillian honor for a teenager, Pradhan Mantri Rashtriya Bal Puraskar, in the category of innovation.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="https://tnshgl.me/" target="_blank">website</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 2%; font-size: 150%;">
+            archit gupta [co-founder]
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 1%; background-color: rgb(240, 239, 239); width: 70%; height: 60px;">
+            <p style="padding-top: 1%; padding-left: 1%; padding-bottom: 1%; padding-right: 1%; font-weight: 500;">incoming freshman at UIUC who loves to explore machine learning. passionate about design, cricket, politics and writing.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="http://guptaarchit.me/" target="_blank">website</a>
+        </div>
+    </div>
+    <div class="u-pull-bottom" style="margin-top: 5%; text-align: center; font-size: 80%; font-weight: 300;">contact either of us at <a href="mailto:goeltanish15@gmail.com">goeltanish115@gmail.com</a> or <a href="mailto:ag18052002@gmail.com">ag18052002@gmail.com</a> for any issue or clarification</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title> taar </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/normalize.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/skeleton.css') }}">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+{% endblock %}
+
+{% block body %}
+
+
+
+
+  <div class="container" style="padding-left: 15%; margin: 0;">
+    <div class="u-pull-right">
+      <p><a href="about-us">about us</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="about-taar">about taar</a></p>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 0;">
+    <div class="row">
+      <div class="u-pull-center" style="margin-top: 2%; font-size: 220%; color: #B71D1D; font-weight: 300; margin-bottom: 0;"><img src="{{url_for('static', filename='pic.png')}}" style="height: 35px; width: 24.97px;">&nbsp;taar</div>
+      <div class="u-pull-center" style="margin-top: 0;">where opinions meet facts</div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="u-pull-center" style="margin-top: 4%; display: flex; justify-content: center;">
+        <form action="{{ url_for('content') }}" method="post">
+          <textarea name="projectFilepath" placeholder="enter text here"></textarea>
+          <br>
+          <p>using machine learning and nlp, we will analyse any piece of text and tell you how biased it is -- to get started, copy & paste any article you have recently read.</p>
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="u-pull-bottom" style="text-align: center; font-size: 80%; font-weight: 300;">contact us at <a href="mailto:goeltanish15@gmail.com">goeltanish115@gmail.com</a> or <a href="mailto:ag18052002@gmail.com">ag18052002@gmail.com</a> for any issue or clarification</div>
+
+
+
+
+
+{% endblock %}
