@@ -1,2 +1,2 @@
 # taar
- taar is a web application that uses natural language processing to analyse articles and blogs to evaluate their subjectivity and classify them as unbiased, slightly biased, biased or highly biased. It is built on flask.
+ taar is a web application that uses natural language processing to analyse articles and blogs, evaluate their subjectivity and score them out of 100. It was built using textblob, flask and html/css. 
