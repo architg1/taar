@@ -45,12 +45,14 @@
   <div class="container">
     <div class="row">
       <div class="u-pull-center" style="margin-top: 4%; display: flex; justify-content: center;">
+
         <form action="{{ url_for('content') }}" method="post">
-          <textarea name="projectFilepath" placeholder="enter text here"></textarea>
+          <textarea name="projectFilepath" placeholder="enter text or a link here"></textarea>
           <br>
           <p>using machine learning and nlp, we will analyse any piece of text and tell you how biased it is -- to get started, copy & paste any article you have recently read.</p>
           <input type="submit">
         </form>
+
       </div>
     </div>
   </div>

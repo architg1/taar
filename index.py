@@ -1,6 +1,7 @@
 from textblob import TextBlob
 from flask import Flask, render_template
 from flask import request
+from newspaper import Article
 
 app=Flask(__name__)
 
@@ -22,18 +23,37 @@ def taar():
 
 def content():
     data = request.form['projectFilepath']
-    txt = TextBlob(data)
-    score = 0
-    for sentence in txt.sentences:
 
-        sentence_score = sentence.sentiment.subjectivity
-        if sentence_score == 0:
-            score = score + 0
-        else:
-            score = score + sentence_score
-    score = score/len(txt.sentences)
-    score = score*100
-    int_score = int(score)
+    if data.startswith('http'):
+        article = Article(data)
+        article.download()
+        article.parse()
+        main_text = article.text
+        txt = TextBlob(main_text)
+        score = 0
+        for sentence in txt.sentences:
+
+            sentence_score = sentence.sentiment.subjectivity
+            if sentence_score == 0:
+                score = score + 0
+            else:
+                score = score + sentence_score
+        score = score / len(txt.sentences)
+        score = score * 100
+        int_score = int(score)
+    else:
+        txt = TextBlob(data)
+        score = 0
+        for sentence in txt.sentences:
+
+            sentence_score = sentence.sentiment.subjectivity
+            if sentence_score == 0:
+                score = score + 0
+            else:
+                score = score + sentence_score
+        score = score / len(txt.sentences)
+        score = score * 100
+        int_score = int(score)
 
     return render_template('analysis.html',score = int_score)
 

@@ -3,3 +3,4 @@ gunicorn
 textblob
 SQLAlchemy
 nltk
+newspaper3k
